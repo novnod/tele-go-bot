@@ -252,7 +252,7 @@ func forfeitScrambleCommand(bot *tgbotapi.BotAPI, update tgbotapi.Update) {
 	} else {
 		chat := chatStore.Chats[chatID]
 		chat.ScrambledWord = ""
-		msg := tgbotapi.NewMessage(chatID, fmt.Sprintf("The word that was sent out was %s", chatStore.Chats[chatID].ScrambledWord))
+		msg := tgbotapi.NewMessage(chatID, fmt.Sprintf("The scrambled word was %s", chatStore.Chats[chatID].ScrambledWord))
 		bot.Send(msg)
 		chatStore.UpdateChat(chatID, chat)
 	}
