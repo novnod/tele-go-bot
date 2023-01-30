@@ -21,9 +21,9 @@ COPY . .
 # Build the Go app
 RUN go build -o main .
 
-ENV TELE-GOAT-SECRET ""
+ENV TELE_GOAT_SECRET ""
 
-ADD . $TELE-GOAT-SECRET
+ADD . $TELE_GOAT_SECRET
 
 # Expose port 8080 to the outside world
 EXPOSE 8080

@@ -31,7 +31,7 @@ func main() {
 
 	randomWordArray = s.Split(string(content), "\n")
 
-	bot, err := tgbotapi.NewBotAPI(os.Getenv("TELE-GOAT-SECRET"))
+	bot, err := tgbotapi.NewBotAPI(os.Getenv("TELE_GOAT_SECRET"))
 	if err != nil {
 		log.Panic(err)
 	}
